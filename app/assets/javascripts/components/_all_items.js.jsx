@@ -1,8 +1,6 @@
 var AllItems = React.createClass({
-
-  componentDidMount() {
-    $.getJSON('/api/v1/items.json', (response) => { this.setState({ items: response}) });
-    console.log('Component mounted');
+  handleDelete(id) {
+    this.props.handleDelete(id);
   },
 
   render() {
@@ -11,9 +9,11 @@ var AllItems = React.createClass({
           <div key={item.id}>
             <h3>{item.name}</h3>
             <p>{item.description}</p>
+            <button onClick={this.handleDelete.bind(this, item.id)} >Delete</button>
           </div>
         )
     });
+
     return (
         <div>
           {items}

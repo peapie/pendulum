@@ -11,6 +11,7 @@ var NewItem = React.createClass({
       }
     });
   },
+
   render() {
     return (
       <div>
