@@ -17,7 +17,7 @@ var NewItem = React.createClass({
       <div>
         <input ref='name' placeholder='Enter new item' />
         <input ref='description' placeholder='Enter a description' />
-          <button onCLick={this.handleClick}> Submit</button>
+          <button onClick={this.handleClick}> Submit</button>
       </div>
     )
   }
